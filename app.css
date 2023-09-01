@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Zen+Old+Mincho&display=swap');
+
+:root {
+    --bg-color: #33323b;
+    --button-text: #6B6969;
+    --button-bg: #D9D9D9;
+    --main-text: #9A9595;
+    --sections: #212020;
+}
+
+.app {
+    background-color: var(--bg-color); 
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100vw;
+    font-family: 'Zen Old Mincho', serif;
+    font-size: large;
+    color: var(--dark-gray);
+    display: flex;
+    max-height: 100vh;           
+    flex-direction: row;         
+    direction: ltr;                      
+}
+
+body {
+    background-color: var(--bg-color);      
+    margin: 0 auto;
+    padding: 0;
+    max-width: 80vw;
+    font-family: 'Zen Old Mincho', serif;
+    font-size: large;
+    color: var(--dark-gray);
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Zen Old Mincho', serif;
+    font-weight: bold;
+    color: var(--matcha);
+
+}
+
+header {
+    background-color: var(--light-cream);
+    padding: 5px;
+    margin: 5px;
+    border: 10px solid var(--matcha);
+    border-radius: 10px;
+    min-width: fit-content;
+    max-width: fit-content;
+    white-space: nowrap;
+}
+
+main {
+    background-color: var(--medium-cream);
+    padding: 5px;
+    margin: 5px;
+    border: 10px solid var(--matcha);
+    border-radius: 10px;
+    min-width: 400px;
+
+}
+
+nav {
+    text-decoration: none;
+    min-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--matcha);
+    color: var(--dark-gray);
+    padding: 5px;
+    margin: 10px;
+    border: 5px solid var(--light-cream);
+    border-radius: 5px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: var(--light-cream);
+    border: 5px solid var(--matcha);
+}
+
+button {
+    background-color: var(--button-color);
+    border: 5px solid var(--dark-gray);
+    border-radius: 15px;
+    color: var(--light-cream);
+    margin: 5px;
+    height: 40px;
+    width: 200px;
+}
+
+button:hover {
+    background-color: var(--matcha);
+    color: var(--dark-gray);
+    border: 5px solid var(--medium-cream);
+    cursor: pointer;
+}
+
+.nav-and-menu {
+    display: inline-flex;           
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    max-height: 95vh;
+}
+
+.leetcode-menu {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 600px;
+    background-color: var(--dark-gray);
+    color: var(--dark-gray);
+    padding: 5px;
+    margin: 5px;
+    border: 5px solid var(--matcha);
+    border-radius: 5px;
+    overflow-y: scroll;
+    align-items: center;
+}
+
+.inner-menu {
+    text-decoration: none; 
+    display: flex;
+    flex-direction: column;                     
+    width: 260px;
+    height: 430px;
+    background-color: var(--light-cream);
+    color: var(--dark-gray);
+    padding: 5px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    align-items: center;
+}
+
+.text-section {
+    background-color: var(--dark-gray-trans);
+    border: 5px solid var(--dark-gray);
+    color: var(--light-cream);
+    border-radius: 5px;
+    margin: 2%;
+    padding: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
+
+
+
+
+
+
+
+ 
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 800px) {
+
+    .app {
+        background-color: var(--bg-color);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 100vw;
+        font-family: 'Zen Old Mincho', serif;
+        font-size: large;
+        color: var(--main-text);
+        display: flex;
+        max-height: 100vh;           
+        flex-direction: row;         
+        direction: ltr;                      
+    }
+
+    body {
+        background-color: var(--bg-color);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 90vw;
+        font-family: 'Zen Old Mincho', serif;
+        font-size: large;
+        color: var(--main-text);
+        display: flex;
+        max-height: 100vh;          
+        flex-direction: row;         
+        direction: ltr;                      
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Zen Old Mincho', serif;
+        font-weight: bold;
+        color: var(--main-text);
+    }
+    
+    
+    main {
+        background-color: var(--sections);
+        padding: 1%;
+        margin: 5% 5% 5% 15%;
+        border: 10px solid var(--sections);
+        border-radius: 10px;
+        max-width: 80vw;      
+        min-width: 50vw;         
+        max-height: 90vh;   
+        min-height: 80vh;  
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    nav {
+        text-decoration: none;
+        min-width: 100px;
+        display: flex;                      
+        flex-direction: column;             
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    
+    
+    nav a {
+        text-decoration: none;
+        display: flex;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        padding: 1%;
+        margin: 4% 4% 4% 4%;
+        border: 5px solid var(--button-bg);
+        border-radius: 15px;
+        width: 200px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav a:hover {
+        background-color: var(--sections);
+        color: var(--button-bg);
+        border: 5px solid var(--sections);
+        cursor: pointer;
+    }
+    
+    
+    button {
+        background-color: var(--button-bg);
+        border: 5px solid var(--button-bg);
+        border-radius: 15px;
+        color: var(--button-text);
+        margin: 5px;
+        padding:  5px;                   
+        font-weight: 100;             
+        font-size: large;       
+        height: 40px;
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    button:hover {
+        background-color: var(--sections);
+        color: var(--button-bg);
+        border: 5px solid var(--sections);
+        cursor: pointer;
+    }
+
+    
+    .leetcode-menu {
+        text-decoration: none; 
+        display: flex;
+        flex-direction: column;                     
+        width: 260px;
+        height: 430px;
+        background-color: var(--sections);
+        color: var(--main-text);
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        align-items: center;
+    }
+
+    .inner-menu {
+        text-decoration: none; 
+        display: flex;
+        flex-direction: column;                     
+        width: 240px;
+        height: 430px;
+        background-color: var(--bg-color);
+        color: var(--main-text);
+        padding: 5px;
+        border-radius: 5px;
+        overflow-y: scroll;
+        align-items: center;
+        direction: rtl;
+    }
+
+    .inner-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .inner-menu::-webkit-scrollbar-track {
+        background-color: #1c1c1c;
+    }
+      
+    .inner-menu::-webkit-scrollbar-thumb {
+        background-color: #474646;
+        border-radius: 10px;
+    }
+      
+    .inner-menu::-webkit-scrollbar-thumb:hover {
+        background-color: #807f7f;
+    }
+
+    .nav-text {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-and-menu {
+        display: inline-flex;           
+        display: flex;
+        flex-direction: column;
+        margin: 1%;
+        max-height: 95vh;
+    }
+
+    .text-section {
+        background-color: var(--sections);
+        border: 5px solid var(--bg-color);
+        color: var(--main-text);
+        border-radius: 15px;
+        text-align: center;
+        height: 80%;
+        width: 90%;
+    }
+
+    .nav-back {
+        text-decoration: none;
+        width: 300px;
+        display: flex;                    
+        flex-direction: row;           
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .inner-buttons {
+        text-decoration: none;
+        display: flex;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        padding: 10px;
+        border: 5px solid var(--button-bg);
+        border-radius: 15px;
+        margin: 10px auto 10px auto;
+        min-width: 200px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner-buttons:hover {
+        background-color: var(--bg-color);
+        color: var(--button-bg);
+        border: 5px solid var(--sections);
+        cursor: pointer;
+    }
+
+    .leet-main-page {
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .button-labels {
+        text-align: center;
+        max-width: 200px;
+        margin: auto;
+    }
+
+    .no-bullets {
+        list-style-type: none;
+    }
+
+    .contact-inner {
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    .align-left {
+        text-align: left;
+    }
+
+    .buttons-div {
+        justify-content: center;
+        display: flex;
+    }
+
+    .text-div {
+        overflow-y: scroll;
+        max-height: 300px;
+    }
+
+    .single-button {
+        margin: 20px;
+    }
+
+    .start-studying {
+        text-decoration: none;
+        display: flex;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        padding: 10px;
+        border: 5px solid var(--button-bg);
+        border-radius: 15px;
+        margin: 50px auto 10px auto;
+        min-width: 200px;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .start-studying:hover {
+        background-color: var(--bg-color);
+        color: var(--button-bg);
+        border: 5px solid var(--sections);
+        cursor: pointer;
+    }
+
+    path {
+        color: var(--sections);
+        cursor: pointer;
+    }
+
+    path:hover {
+        color: var(--button-bg);
+        cursor: pointer;
+    }
+
+    .add {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: none;
+        border-radius: 20px;
+    }
+
+    .edit {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: none;
+        border-radius: 20px;
+    }
+
+    .del {
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: none;
+        border-radius: 20px;
+    }
+
+    .add-edit-del {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* entire form/dialog style */
+    .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+        background-color: var(--sections);
+        color: var(--button-color);
+    }
+
+    /* add and edit buttons */
+    button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+        background-color: var(--bg-color);
+        color: var(--button-bg);
+        border: 10px solid var(--bg-color);
+        transition: none;
+        max-width: 100px;
+        -webkit-transition: none;
+    }
+
+    /* add and edit buttons hover */
+    button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1e6y48t-MuiButtonBase-root-MuiButton-root:hover {
+        background-color: var(--button-bg);
+        color: var(--sections);
+        border: 10px solid var(--button-bg);
+    }
+
+    /* Dialog Content Text */
+    p.MuiTypography-root.MuiDialogContentText-root.MuiTypography-body1.MuiDialogContentText-root.css-qfso29-MuiTypography-root-MuiDialogContentText-root {
+        margin-bottom: 10px;
+        color: #6B6969;
+    }
+
+    /* each placeholder text */
+    input#patternKey {
+        color: #6B6969;
+    }
+    input#patternName {
+        color: #6B6969;
+    }
+    input#patternInfo {
+        color: #6B6969;
+    }
+    input#patternSteps {
+        color: #6B6969;
+    }
+    input#patternProblems {
+        color: #6B6969;
+    }
+
+
+}
+
+
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+/* @media all and (min-width: 1080px) {}  */
+
+
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+/* @media print {}  */
+
+
