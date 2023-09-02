@@ -30,17 +30,19 @@ function LeetCodePage( {retrieveAllLeetCode, addIsOpen, setAddIsOpen, editIsOpen
     const [newPatternSteps, setNewPatternSteps]           = useState('newPatternSteps');
     const [newPatternProblems, setNewPatternProblems]     = useState('newPatternProblems');
 
-    const [editPatternKey, setEditPatternKey]               = useState(leetCodeEntry.patternKey);
-    const [editPatternName, setEditPatternName]             = useState(leetCodeEntry.patternName);
-    const [editPatternInfo, setEditPatternInfo]             = useState(leetCodeEntry.patternInfo);
-    const [editPatternSteps, setEditPatternSteps]           = useState(leetCodeEntry.patternMoreInfo);
-    const [editPatternProblems, setEditPatternProblems]     = useState(leetCodeEntry.patternSources);
+    const [editPatternKey, setEditPatternKey]               = useState('');
+    const [editPatternName, setEditPatternName]             = useState('');
+    const [editPatternInfo, setEditPatternInfo]             = useState([]);
+    const [editPatternSteps, setEditPatternSteps]           = useState([]);
+    const [editPatternProblems, setEditPatternProblems]     = useState([]);
 
 
     const addLeetCode = async () => {
-        const patternInfoArr = newPatternInfo.split('&');         // parse the user string into an array via & delimiter
+	// parse the user string into an array via & delimiter
+        const patternInfoArr = newPatternInfo.split('&'); 
         const patternStepsArr = newPatternSteps.split('&');
         const patternProblemsArr = newPatternProblems.split('&');
+
         const newLeetCode = { 
             patternKey: newPatternKey,
             patternName: newPatternName,
@@ -66,43 +68,38 @@ function LeetCodePage( {retrieveAllLeetCode, addIsOpen, setAddIsOpen, editIsOpen
     }
 
     const editLeetCode = async () => {
-        let editPatternInfoArr = leetCodeEntry.patternInfo;         // check if user has changed the values or not
-        let editPatternStepsArr = leetCodeEntry.patternMoreInfo;    // if user didn't update a value, then just set it 
-        let editPatternProblemsArr = leetCodeEntry.patternSources;  // back to its default value, which is the old value
+	// check if user has changed the values or not
+	// if user didn't update a value, then just set it 
+	// back to its default value, which is the old value
+        let editPatternInfoArr = leetCodeEntry.patternInfo;         
+        let editPatternStepsArr = leetCodeEntry.patternMoreInfo;    
+        let editPatternProblemsArr = leetCodeEntry.patternSources;  
         let editPatternKeyCheck = leetCodeEntry.patternKey;
         let editPatternNameCheck = leetCodeEntry.patternName;
 
-        console.log(editPatternInfo);
-        console.log(leetCodeEntry.patternInfo);
-
-        if (editPatternInfo.toString() !== leetCodeEntry.patternInfo.toString()) {
-            if (editPatternInfo === undefined || editPatternInfo === '') {
-                editPatternInfoArr = leetCodeEntry.patternInfo;
-            } else {
-                editPatternInfoArr = editPatternInfo.split('&');
-            }
-            
+	// only update the LC entry if the value has changed
+	if (editPatternKey !== '' && editPatternKey !== null) {
+            editPatternKeyCheck = editPatternKey; 
         }
-        if (editPatternSteps.toString() !== leetCodeEntry.patternMoreInfo.toString()) {
-            if (editPatternSteps === undefined || editPatternSteps === '') {
-                editPatternStepsArr = leetCodeEntry.patternMoreInfo;
-            } else {
-                editPatternStepsArr = editPatternSteps.split('&');
-            }
-        }
-        if (editPatternProblems.toString() !== leetCodeEntry.patternSources.toString()) {
-            if (editPatternProblems === '' || editPatternProblems === undefined) {
-                editPatternProblemsArr = leetCodeEntry.patternSources;
-            } else {
-                editPatternProblemsArr = editPatternProblems.split('&');
-            }
-        }
-        if (editPatternKey !== leetCodeEntry.patternKey) {
-            editPatternKeyCheck = editPatternKey;
-        }
-        if (editPatternName !== leetCodeEntry.patternName) {
+        if (editPatternName !== '' && editPatternName !== null) {
             editPatternNameCheck = editPatternName;
+	}
+	console.log(editPatternInfo);
+        if (editPatternInfo !== [] && editPatternInfo !== null && editPatternInfo.length > 0) {
+            editPatternInfoArr = editPatternInfo.toString().split('&');
         }
+        if (editPatternSteps !== [] && editPatternSteps !== null && editPatternSteps.length > 0) {
+            editPatternStepsArr = editPatternSteps.toString().split('&');
+        }
+	if (editPatternProblems !== [] && editPatternProblems !== null && editPatternProblems.length > 0) {
+            editPatternProblemsArr = editPatternProblems.toString().split('&');
+        } 
+
+	setEditPatternKey('');
+	setEditPatternName('');
+	setEditPatternProblems([]);
+	setEditPatternSteps([]);
+	setEditPatternInfo([]);
 
         const response = await fetch(`/update/${leetCodeEntry._id}`, {
             method: 'PUT',
