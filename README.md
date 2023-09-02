@@ -60,12 +60,13 @@ create, edit, and delete LeetCode study entries.
       npm install
    ```
    
-6. Check that your MongoDB cluster is connected and then start the backend of the app:
+6. Check that your MongoDB cluster is connected and then start the backend of the app from the
+   backend directory:
     ```sh
       node controller.mjs
     ```
     
-7. Start the frontend of the app:
+8. Start the frontend of the app from the frontend directory:
     ```sh
       npm start
     ```
