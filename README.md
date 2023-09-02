@@ -40,7 +40,7 @@ create, edit, and delete LeetCode study entries.
    ```
 
 3. Store environment variables by creating ```/backend/.env``` in the backend directory.<br>
-   Place your environment variables into this file. Replace <username> and <password> in the
+   Place your environment variables into this file. Replace &lt;username&gt; and &lt;password&gt; in the
    MongoDB connect string with your MongoDB credentials. <br>
       ```
         PORT=8000
