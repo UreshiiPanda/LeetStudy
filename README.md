@@ -5,8 +5,8 @@
 
 <a name="readme-top"></a>
 
-<!-- D&DB Gif -->
-<!-- ![ddb gif](https://github.com/UreshiiPanda/ddb/assets/39992411/20b02b37-bfe8-41b9-8f10-db552834da5d) -->
+<!-- LeetCode Gif -->
+![leet](https://github.com/UreshiiPanda/LeetStudy/assets/39992411/ec14792d-96d8-433c-ba4b-e35accb09f9d)
 
 
 <!-- ABOUT THE PROJECT -->
