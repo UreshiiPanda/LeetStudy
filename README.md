@@ -48,7 +48,7 @@ create, edit, and delete LeetCode study entries.
       ```
 
       NOTE:  The package.json on the frontend has a proxy setup by default, please adjust this
-             according to your own connection needs. Default ports have been set to 8000 for
+             according to your own connection needs. Default ports are set to 8000 for
              the backend, and 3000 for the frontend. <br>
       ```json
           "proxy": "http://localhost:8000"
