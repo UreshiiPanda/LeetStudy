@@ -24,8 +24,36 @@ create, edit, and delete LeetCode study entries.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- GETTING STARTED -->
-## Getting Started:<br>
+
+
+<!-- GETTING STARTED WITH DOCKER -->
+## Getting Started With Docker:<br>
+
+0. If you already have Docker installed on your machine, then this app can be simply run with the
+   following instructions. The docker-compose.yml contains all of the Docker info needed
+   to understand the context in which the app runs, including: builds, ports, network, volume
+   storage, and environment variables. Note that for simplicity, the environment variables for
+   the backend express server have been placed directly into the .yml file, but these can also be
+   moved to a separate .env file and more can be read about how to do that here:
+   [Docker Env Vars](https://docs.docker.com/compose/environment-variables/set-environment-variables/)
+
+1. Clone all project files into a root working directory.
+    ```sh
+        git clone https://github.com/UreshiiPanda/LeetStudy.git
+    ```
+2. From that root directory, run docker compose:
+    ```sh
+        docker compose up
+    ```
+3. To stop the app, stop docker compose from another terminal:
+    ```sh
+        docker compose down
+    ```
+
+
+
+<!-- GETTING STARTED WITHOUT DOCKER -->
+## Getting Started Without Docker:<br>
 
 1. Clone all project files into a root working directory.
     ```sh
