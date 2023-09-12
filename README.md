@@ -48,13 +48,14 @@ create, edit, and delete LeetCode study entries.
       ```
 
       NOTE:  The package.json on the frontend has a proxy setup by default, please adjust this
-             according to your own connection needs. Default ports are set to 8000 for
-             the backend, and 3000 for the frontend. <br>
+             according to your own connection needs. The proxy is currently setup to connect to a Docker
+             Container, so please change the proxy to the localhost proxy shown below in order to use it
+             without Docker. Default ports are set to 8000 for the backend, and 3000 for the frontend. <br>
       ```json
           "proxy": "http://localhost:8000"
       ```
 
-4. Run the following command in both the frontend and the backend directories to install the
+5. Run the following command in both the frontend and the backend directories to install the
    node modules required for both ends of the app.
    ```sh
       npm install
