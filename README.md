@@ -44,7 +44,7 @@ create, edit, and delete LeetCode study entries.
    MongoDB connect string with your MongoDB credentials. <br>
       ```
         PORT=8000
-        MONGODB_CONNECT_STRING=mongodb+srv://<username>:<password>@cluster0.vj6fual.mongodb.net/?retryWrites=true&w=majority
+        mongo_db_uri=mongodb+srv://<username>:<password>@cluster0.vj6fual.mongodb.net/?retryWrites=true&w=majority
       ```
 
       NOTE:  The package.json on the frontend has a proxy setup by default, please adjust this
