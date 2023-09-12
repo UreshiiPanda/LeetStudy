@@ -50,6 +50,9 @@ create, edit, and delete LeetCode study entries.
         docker compose down
     ```
 
+<br><br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 <!-- GETTING STARTED WITHOUT DOCKER -->
