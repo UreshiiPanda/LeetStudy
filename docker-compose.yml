@@ -1,0 +1,45 @@
+version: "v2.20.2"
+
+services:
+
+  react-app:
+    build:
+      context: ./frontend
+    container_name: react-app
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    networks:
+      - leet-study
+
+  express-server: 
+    build:
+      context: ./backend
+      args:
+        MONGO_DB_URI: "mongodb://mongo:27017"
+        PORT: 8000
+    container_name: express-server
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    networks:
+      - leet-study
+
+  mongo:
+    image: mongo:latest
+    container_name: mongoDB
+    ports:
+      - "27017:27017"
+    networks:
+      - leet-study
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  leet-study:
+    driver: bridge
+
+volumes:
+  mongo-data:
+    driver: local

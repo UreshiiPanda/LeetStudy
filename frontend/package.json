@@ -9,7 +9,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8000",
+  "proxy": "http://express-server:8000",
   "author": "Joseph Houghton",
   "dependencies": {
     "@emotion/react": "^11.11.1",

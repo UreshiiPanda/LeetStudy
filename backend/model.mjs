@@ -1,10 +1,12 @@
 import mongoose from 'mongoose';
 import 'dotenv/config';
 
+console.log("MONGO DB URI: ", process.env.mongo_db_uri);
+console.log("PORT: ", process.env.port);
 
-// Connect to MongoDB Atlas cluster
+// Connect to a MongoDB Docker Container or to a MongoDB Atlas Cluster
 mongoose.connect(
-    process.env.MONGODB_CONNECT_STRING,
+    process.env.mongo_db_uri, 
     { useNewUrlParser: true }
 );
 

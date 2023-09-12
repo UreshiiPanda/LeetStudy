@@ -4,8 +4,9 @@ import express from 'express';
 // import the export obj from model.mjs and name it LeetCodeModels
 import * as LeetCodeModels from './model.mjs';
 
-// import the port number from the env file
-const PORT = process.env.PORT;
+// import the port number from the env
+const PORT = process.env.port;
+
 const app = express();
 app.use(express.json());
 

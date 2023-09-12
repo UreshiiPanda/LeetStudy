@@ -40,8 +40,10 @@ function App() {
       const response = await fetch(`/get`, { method: 'GET' });    // retrieve a single Leetcode Entry by Name
       const allLeetCodeEntries = await response.json();           // Name field is just based on which menu item is clicked
       console.log("ALL LEET CODES: ", allLeetCodeEntries);
-      setAllLeetCode(allLeetCodeEntries);
-      setLeetCodeEntry(allLeetCodeEntries[0]);                    // set the default LeetCode to be the first one in the DB            
+      if (allLeetCodeEntries.length > 0) {
+	setAllLeetCode(allLeetCodeEntries);
+	setLeetCodeEntry(allLeetCodeEntries[0]);                    // set the default LeetCode to be the first one in the DB        
+      }
     }
 
     useEffect(() => {
